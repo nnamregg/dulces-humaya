@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --golden: #cda45e;
+    --dark-brown: #62411d;
+    --light-brown: #84694d;
+    --dark-gray: #1a1814;
+    --light-gray: #aaaaaa;
+}
+
+body {
+    font-family: 'Manrope', sans-serif !important;
+    margin: 0;
+}
+
+.golden {
+    color: var(--golden) !important;
+}
+
+.light-gray {
+    color: var(--light-gray) !important;
+}
+
+.section-title > h2 {
+    letter-spacing: 2px;
+    font-size: .9rem;
+    color: var(--light-gray);
+}
+
+.section-title > h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 4px 10px;
+}
+
+.section-title > p {
+    font-size: 2rem;
+}
+
+/* Sección Hero */
+
+.hero {
+    background: center / cover fixed url("./assets/hero-bg.jpg");
+}
+
+.btn-hero {
+    border: 2px solid var(--golden);
+    border-radius: 50px;
+    letter-spacing: .1rem;
+    padding-inline: 2.4rem;
+}
+
+.btn-hero:hover {
+    background-color: var(--golden);
+}
+
+/* Sección Calidad */
+
+.quality-box {
+    padding: 50px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.3s;
+    background: var(--dark-gray);
+    user-select: none;
+    border-radius: .3rem;
+}
+
+.quality-box > svg {
+    fill: var(--golden);
+    height: 3.4rem !important;
+    width: 3.4rem !important;
+}
+
+.quality-box > p {
+    font-size: .9rem;
+}
+
+.quality-box:hover {
+    background: black;
+    padding: 30px 30px 70px 30px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Sección Productos */
+
+.products {
+    overflow: hidden;
+}
+
+.products .nav-tabs {
+    border: 0;
+}
+
+.products .nav-link {
+    border: 0;
+    height: 100%;
+    padding: 15px;
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 0;
+    border-right: 2px solid var(--golden);
+    font-weight: 600;
+    font-size: 15px;
+}
+  
+.products .nav-link:hover {
+    color: var(--golden);
+    border-color: var(--golden);
+}
+
+.products .nav-link.active {
+    color: #1a1814;
+    background: var(--golden);
+    border-color: var(--golden);
+}
+
+.products .tab-pane.active {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.products .tab-pane p {
+    font-size: .9rem;
+}
+
+.btn-golden {
+    border: 2px solid var(--golden);
+    border-radius: 0;
+    color: var(--golden);
+}
+
+.btn-golden:hover {
+    background-color: var(--golden);
+    color: #000;
+}
+
+.btn-golden:active, .btn-golden:focus-visible {
+    background-color: var(--light-golden) !important;
+    color: #000 !important;
+}
+
+@media (max-width: 992px) {
+    .products .nav-link {
+      border: 0;
+      padding: 15px;
+    }
+
+    .products h3 {
+        margin-top: 1.4rem;
+    }
+}
