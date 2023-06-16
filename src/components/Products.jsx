@@ -8,10 +8,10 @@ const Products = () => {
 
     return (
         <section id="products" className="products bg-black py-5">
-            <Container fluid="lg">
+            <Container>
                 <div className="section-title pb-4 text-start">
-                    <h2 className="text-uppercase fw-semibold m-0">Productos</h2>
-                    <p className="golden fw-semibold">Nuestros dulces y delicias</p>
+                    <h2 className="text-uppercase fw-bold m-0">Productos</h2>
+                    <p className="golden fw-bolder">Nuestros dulces y sabores</p>
                 </div>
 
                 <Row>
@@ -43,7 +43,7 @@ const Products = () => {
                                         <Button variant="golden" size="sm" className="px-4">+ INFO</Button>
                                     </Col>
                                     <Col lg={3} className="order-1 order-lg-2">
-                                        <Image fluid roundedCircle src={prod1Img} alt="Dulce de leche tradicional" />
+                                        <Image fluid roundedCircle src={prod1Img} alt="Dulce de leche tradicional" className="d-block mx-auto" />
                                     </Col>
                                 </Row>
                             </div>
@@ -57,7 +57,7 @@ const Products = () => {
                                         <Button variant="golden" size="sm" className="px-4">+ INFO</Button>
                                     </Col>
                                     <Col lg={3} className="order-1 order-lg-2">
-                                        <Image fluid roundedCircle src={prod2Img} alt="Dulce de leche sin azúcar" />
+                                        <Image fluid roundedCircle src={prod2Img} alt="Dulce de leche sin azúcar" className="d-block mx-auto" />
                                     </Col>
                                 </Row>
                             </div>
@@ -71,7 +71,7 @@ const Products = () => {
                                         <Button variant="golden" size="sm" className="px-4">+ INFO</Button>
                                     </Col>
                                     <Col lg={3} className="order-1 order-lg-2">
-                                        <Image fluid roundedCircle src={prod3Img} alt="Dulce Choconutt" />
+                                        <Image fluid roundedCircle src={prod3Img} alt="Dulce Choconutt" className="d-block mx-auto" />
                                     </Col>
                                 </Row>
                             </div>
@@ -85,7 +85,7 @@ const Products = () => {
                                         <Button variant="golden" size="sm" className="px-4">+ INFO</Button>
                                     </Col>
                                     <Col lg={3} className="order-1 order-lg-2">
-                                        <Image fluid roundedCircle src={prod4Img} alt="Alfajores de Maizena" />
+                                        <Image fluid roundedCircle src={prod4Img} alt="Alfajores de Maizena" className="d-block mx-auto" />
                                     </Col>
                                 </Row>
                             </div>

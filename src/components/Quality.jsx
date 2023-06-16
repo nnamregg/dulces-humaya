@@ -7,14 +7,14 @@ const Quality = () => {
 
     return (
         <section id="quality" className="quality bg-dark py-5">
-            <Container fluid="lg">
+            <Container>
                 <div className="section-title pb-4 text-start">
-                    <h2 className="text-uppercase fw-semibold m-0">CALIDAD</h2>
-                    <p className="golden fw-semibold">La mejor calidad para vos</p>
+                    <h2 className="text-uppercase fw-bold m-0">CALIDAD</h2>
+                    <p className="golden fw-bolder">La mejor calidad para vos</p>
                 </div>
                 
                 <Row>
-                    <Col lg={4}>
+                    <Col lg={4} className="mt-4 mt-lg-0">
                         <div className="quality-box text-center">
                             <RiPlantFill />
                             <h4 className="golden mt-3 fw-semibold">100% ORGÁNICO</h4>

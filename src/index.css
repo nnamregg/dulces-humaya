@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --golden: #cda45e;
@@ -13,6 +14,15 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: 'Playfair', serif !important;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 .golden {
     color: var(--golden) !important;
 }
@@ -21,13 +31,13 @@ body {
     color: var(--light-gray) !important;
 }
 
-.section-title > h2 {
+.section-title>h2 {
     letter-spacing: 2px;
-    font-size: .9rem;
+    font-size: .8rem;
     color: var(--light-gray);
 }
 
-.section-title > h2::after {
+.section-title>h2::after {
     content: "";
     width: 120px;
     height: 1px;
@@ -36,8 +46,19 @@ body {
     margin: 4px 10px;
 }
 
-.section-title > p {
-    font-size: 2rem;
+.section-title>p {
+    font-size: 2.4rem;
+    font-family: 'Playfair', serif;
+    line-height: 2.2rem;
+    margin-top: 1rem;
+}
+
+#quality, #products, #about, #clients, #recipes, #contact {
+    scroll-margin-top: 66px;
+}
+
+header {
+    backdrop-filter: blur(5px);
 }
 
 /* Sección Hero */
@@ -51,6 +72,7 @@ body {
     border-radius: 50px;
     letter-spacing: .1rem;
     padding-inline: 2.4rem;
+    background-color: rgba(26, 24, 20, .35);
 }
 
 .btn-hero:hover {
@@ -68,13 +90,13 @@ body {
     border-radius: .3rem;
 }
 
-.quality-box > svg {
+.quality-box>svg {
     fill: var(--golden);
     height: 3.4rem !important;
     width: 3.4rem !important;
 }
 
-.quality-box > p {
+.quality-box>p {
     font-size: .9rem;
 }
 
@@ -105,7 +127,7 @@ body {
     font-weight: 600;
     font-size: 15px;
 }
-  
+
 .products .nav-link:hover {
     color: var(--golden);
     border-color: var(--golden);
@@ -121,8 +143,18 @@ body {
     animation: fadeIn 0.5s ease-out;
 }
 
+.products .tab-pane h3 {
+    font-family: 'Playfair', serif !important;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
 .products .tab-pane p {
     font-size: .9rem;
+}
+
+.products .tab-pane button {
+    width: auto;
 }
 
 .btn-golden {
@@ -136,18 +168,302 @@ body {
     color: #000;
 }
 
-.btn-golden:active, .btn-golden:focus-visible {
+.btn-golden:active,
+.btn-golden:focus-visible {
     background-color: var(--light-golden) !important;
     color: #000 !important;
 }
 
 @media (max-width: 992px) {
     .products .nav-link {
-      border: 0;
-      padding: 15px;
+        border: 0;
+        padding: 15px;
     }
 
     .products h3 {
         margin-top: 1.4rem;
     }
+
+    .products .tab-pane button {
+        width: 100%;
+    }
+}
+
+/* Acerca de... */
+
+.about h3 {
+    font-family: 'Playfair', serif !important;
+}
+
+/* Clientes */
+
+.carousel .carousel-item svg {
+    font-size: 10rem;
+    margin-bottom: 100px;
+    color: var(--light-gray);
+}
+
+.carousel-caption h3 {
+    /* font-family: 'Playfair', serif !important; */
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--golden);
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: var(--golden);
+}
+
+/* Recetas */
+
+.recipes {
+    background-color: var(--dark-gray);
+}
+
+.recipes .recipe-card {
+    position: relative;
+    height: 400px;
+}
+
+.recipes .recipe-card .recipe-info {
+    font-family: 'Playfair', serif !important;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+}
+
+.recipes .recipe-card .recipe-info .recipe-info-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    transition: bottom 0.4s;
+}
+
+.recipes .recipe-card .recipe-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.recipes .recipe-card .recipe-info span {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+@media (min-width: 993px) {
+    .recipes .recipe-card .recipe-info {
+        opacity: 0;
+    }
+
+    .recipes .recipe-card:hover .recipe-info {
+        opacity: 1;
+        transition: 0.4s;
+    }
+}
+
+/* Contacto */
+
+.contact .contact-info .ico-bg {
+    width: 40px;
+    height: 40px;
+    background: var(--golden);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    float: left;
+    margin-top: 2px;
+}
+
+.contact .contact-info svg {
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .contact-info h4 {
+    color: #fff;
+    padding: 0 0 0 60px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.contact .contact-info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #bab3a6;
+}
+
+.contact .contact-info .schedule,
+.contact .contact-info .email,
+.contact .contact-info .phone {
+  margin-top: 2rem;
+}
+
+.contact form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact form input,
+.contact form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: .85rem;
+  background: #0c0b09;
+  border-color: #625b4b;
+  color: #fff;
+}
+
+.contact form input::-moz-placeholder,
+.contact form textarea::-moz-placeholder {
+  color: #a49b89;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #a49b89;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: var(--golden);
+  background-color: #000;
+  color: #fff;
+}
+
+.contact form input {
+  height: 44px;
+}
+
+.contact form textarea {
+  padding: 10px 12px;
+}
+
+.contact form button[type=submit] {
+    background: var(--golden);
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.contact form button[type=submit]:hover {
+    background: #d3af71;
+}
+
+/* Footer */
+
+footer>.footer-top {
+    background: #0c0b09;
+    border-top: 1px solid #37332a;
+    border-bottom: 1px solid #28251f;
+    padding: 60px 0 30px 0;
+}
+
+footer .footer-top .footer-info p {
+    font-size: .9rem;
+    line-height: 1.6rem;
+}
+
+footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #28251f;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+footer .footer-top .social-links a:hover {
+    background: var(--golden);
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-top .footer-links {
+    margin-bottom: 30px;
+}
+
+footer .footer-top .footer-links ul {
+    list-style: none;
+}
+
+footer .footer-top .footer-links ul svg {
+    padding-right: 2px;
+    color: var(--golden);
+    font-size: .7rem;
+    line-height: 1;
+}
+
+footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-top .footer-links ul a {
+    font-weight: 500;
+}
+
+footer .footer-top .footer-links ul a:hover {
+    color: var(--golden);
+}
+
+footer .footer-top .footer-newsletter form {
+    margin-top: 30px;
+    background: #28251f;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+    border: 1px solid #454035;
+}
+
+footer .footer-top .footer-newsletter form input[type=email] {
+    border: 0;
+    padding: 4px;
+    width: calc(100% - 110px);
+    background: #28251f;
+    color: white;
+}
+
+footer .footer-top .footer-newsletter form input[type=submit] {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px 2px 20px;
+    background: var(--golden);
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+footer .footer-top .footer-newsletter form input[type=submit]:hover {
+    background: #d3af71;
+}
+
+footer .copyright {
+    font-size: .85rem;
 }
