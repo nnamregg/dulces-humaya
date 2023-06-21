@@ -229,10 +229,11 @@ header {
 .recipes .recipe-card {
     position: relative;
     height: 400px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .recipes .recipe-card .recipe-info {
-    font-family: 'Playfair', serif !important;
     opacity: 1;
     position: absolute;
     bottom: 0;
@@ -240,7 +241,7 @@ header {
     left: 0;
     right: 0;
     transition: 0.2s;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 40%);
 }
 
 .recipes .recipe-card .recipe-info .recipe-info-content {
@@ -252,13 +253,60 @@ header {
 }
 
 .recipes .recipe-card .recipe-info h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-family: 'Playfair', serif !important;
+    font-size: 1.6rem;
+    font-weight: 800;
 }
 
 .recipes .recipe-card .recipe-info span {
-    font-size: 1rem;
-    font-style: italic;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+/* Modal de receta */
+
+.modal-backdrop {
+    opacity: .75 !important;
+}
+
+.custom-modal {
+    max-width: none !important;
+    width: 90% !important;
+    margin-inline: auto !important;
+}
+
+.custom-modal .modal-header .btn-close {
+    fill: var(--light-gray) !important;
+}
+
+.custom-modal .list-group.list-group-flush {
+    margin-bottom: 3rem;
+}
+
+.custom-modal .list-group.list-group-flush,
+.custom-modal .list-group.list-group-flush .list-group-item {
+    color: var(--light-gray);
+    background-color: transparent !important;
+    border-color: var(--light-brown);
+}
+
+.custom-modal .modal-content {
+    background-color: var(--dark-gray);
+}
+
+.custom-modal img {
+    width: 100% !important;
+}
+
+#custom-modal-title {
+    font-family: 'Playfair', serif !important;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--golden);
+}
+
+.modal-recipe-info {
+    width: 100%;
 }
 
 @media (min-width: 993px) {
@@ -269,6 +317,19 @@ header {
     .recipes .recipe-card:hover .recipe-info {
         opacity: 1;
         transition: 0.4s;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 80%);
+    }
+
+    .custom-modal {
+        width: 50% !important;
+    }
+
+    #custom-modal-title {
+        font-size: 2.4rem;
+    }
+
+    .modal-recipe-info {
+        width: 50%;
     }
 }
 
