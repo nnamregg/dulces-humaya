@@ -1,8 +1,8 @@
 import { Container, Row, Col, Nav, Image, Button } from 'react-bootstrap';
-import prod1Img from '../assets/products/product-01.png';
-import prod2Img from '../assets/products/product-02.png';
-import prod3Img from '../assets/products/product-03.png';
-import prod4Img from '../assets/products/product-04.png';
+import prod1Img from '../assets/products/product-01.jpg';
+import prod2Img from '../assets/products/product-02.jpg';
+import prod3Img from '../assets/products/product-03.jpg';
+import prod4Img from '../assets/products/product-04.jpg';
 
 const Products = () => {
 
@@ -92,9 +92,7 @@ const Products = () => {
                         </div>
                     </Col>
                 </Row>
-               
             </Container>
-            
         </section>    
     )
 };

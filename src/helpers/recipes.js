@@ -1,8 +1,8 @@
 export const recipes = [
     {
         title: "Alfajores de Dulce de Leche",
-        img: "recipes-01.png",
-        imgWide: "recipes-01_wide.png",
+        img: "recipes-01.jpg",
+        imgWide: "recipes-01_wide.jpg",
         prepTime: 30,
         servings: 12,
         difficulty: "Fácil",
@@ -29,8 +29,8 @@ export const recipes = [
     },
     {
         title: "Crepes de Choconutt",
-        img: "recipes-02.png",
-        imgWide: "recipes-02_wide.png",
+        img: "recipes-02.jpg",
+        imgWide: "recipes-02_wide.jpg",
         prepTime: 20,
         servings: 6,
         difficulty: "Media",
@@ -58,8 +58,8 @@ export const recipes = [
     },
     {
         title: "Brownies Veganos",
-        img: "recipes-03.png",
-        imgWide: "recipes-03_wide.png",
+        img: "recipes-03.jpg",
+        imgWide: "recipes-03_wide.jpg",
         prepTime: 45,
         servings: 8,
         difficulty: "Difícil",
